@@ -1,10 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from '../src/components/NavBar';
+
 
 function App() {
-  return ( <Navbar />
-    )
+  return (
+    <>
+        <NavBar /> 
+        
+
+    </>
+  )
+
+
+ 
 }
 
-export default App;
+export default App
