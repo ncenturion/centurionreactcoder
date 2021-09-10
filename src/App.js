@@ -10,7 +10,7 @@ function App() {
     <>
         <NavBar /> 
         <ItemListContainer greeting='Bienvenidos a la Tienda SASA DISEÑO' />
-
+      
     </>
   )
 
