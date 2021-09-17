@@ -5,15 +5,15 @@ const Item = ({agenda}) =>{
         <div key={agenda.id} className='card w-40 mt-3'>
         <div className= 'card-header'>{agenda.name}</div>
         <div className= 'card-body'>
-            <img src={agenda.foto} />
+            <img src={agenda.img}/>
             </div>
             <div className= 'card-footer'>
-            <button className="btn btn-outline-primary btn-block" onClick={()=>setLoading(!loading)}>Detalles</button>
+            <button className="btn btn-outline-primary btn-block" >Detalles</button>
             </div>
             </div>
 
 
-    )
+    )   
 }
 
 export default Item
