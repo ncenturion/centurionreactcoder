@@ -10,9 +10,7 @@ const ItemListContainer =({greeting})=>{
     const [agendas, setAgenda]= useState([])
     const [loading, setLoading]= useState(true)
 
-    const onAdd = (cant)=>{
-        console.log(cant)
-    }
+ 
 
     useEffect(() => {
         getFetch
@@ -31,7 +29,7 @@ const ItemListContainer =({greeting})=>{
 
              { loading ? <h2>Buscando cosas bellas...</h2> : <ItemList agendas={agendas}/>}
             
-             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+            
         </div>
     )
        
