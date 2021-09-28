@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 const Item = ({agenda}) =>{
     return (
@@ -8,7 +9,10 @@ const Item = ({agenda}) =>{
             <img src={agenda.img} alt=""/>
             </div>
             <div className= 'card-footer'>
-            <button className="btn btn-outline-primary btn-block" >Detalles</button>
+                <Link to= {`/detalle/${agenda.id}`}>
+                    <button className="btn btn-outline-primary btn-block" >Detalles</button>    
+                </Link>
+            
             </div>
             </div>
 

@@ -9,35 +9,33 @@ const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
   const { idCategoria } = useParams();
 
-  useEffect(() => {
+  useEffect(() => {  
+
     if (idCategoria) {
-      getFetch.then(respuesta => {
-        setAgenda(respuesta.filter(art => art.categoria === idCategoria));
+      getFetch
+      .then(respuesta => {
+        setAgenda(respuesta.filter(Item => Item.categoria=== idCategoria) )
       })
-      .catch((error) => console.log(error))
+      .catch(error => console.log(error))
       .finally(() => setLoading(false))
-      
-    } else {
-    }
-    getFetch
-      .then((respuesta) => {
-        setAgenda(respuesta);
+      }else {
+      getFetch
+      .then(respuesta => {
+        setAgenda(respuesta)
       })
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
-  }, [idCategoria]);
+      .catch(error => console.log(error))
+      .finally(() => setLoading(false))
+    }
+  
+  }, [idCategoria]); 
 
   console.log(idCategoria);
   return (
     <div>
       <h1> {greeting}</h1>
 
-      {loading ? (
-        <h2>Buscando cosas bellas...</h2>
-      ) : (
-        <ItemList agendas={agendas} />
-      )}
+      {loading ?  <h2>Buscando cosas bellas...</h2>: <ItemList agendas={agendas} />  }
     </div>
-  );
-};
+  )
+}
 export default ItemListContainer;

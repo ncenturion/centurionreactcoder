@@ -12,12 +12,12 @@ function App() {
     <BrowserRouter>
         <NavBar /> 
         <Switch>
-            <Route path='/' exact >
+            <Route  exact path='/'  >
               <ItemListContainer greeting='Bienvenidos a la Tienda SASA DISEÑO' />
             </Route>
-            <Route path='/categoria/:idCategoria' component={ItemListContainer}/>
-            <Route exact path='/detalle' component={ItemDetailContainer}/>
-            <Route exact path='/cart' component={Cart}/>
+            <Route path='/categoria/:idCategoria' component={ItemListContainer} />
+            <Route exact path='/detalle/:id' component={ItemDetailContainer} />
+            <Route exact path='/cart' component={Cart} />
 
         </Switch>
        

@@ -13,7 +13,7 @@ const NavBar = (props) => {
             <Navbar.Brand>TIENDA SASA-DISEÑO</Navbar.Brand>
           </Link>
           <Nav className="me-auto">
-            <Link to="/categoria/Agenda">Agenda</Link>
+            <Link to="/categoria/Agendas">Agendas</Link>
             <Link to="/categoria/Encuadernacion">Encuadernacion</Link>
             <Link to="/categoria/Identidad de Marca">Identidad de Marca</Link>
             <Link to="/categoria/Carteleria">Carteleria</Link>
