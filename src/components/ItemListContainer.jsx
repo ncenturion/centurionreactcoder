@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getFetch } from "../util/Mock";
-import ItemCount from "./ItemCount";
+
 import ItemList from "./ItemList";
 
 const ItemListContainer = ({ greeting }) => {
@@ -29,7 +29,6 @@ const ItemListContainer = ({ greeting }) => {
   
   }, [idCategoria]); 
 
-  console.log(idCategoria);
   return (
     <div>
       <h1> {greeting}</h1>

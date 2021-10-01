@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Item from './Item'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({Articulo}) => {
@@ -14,6 +15,7 @@ const ItemDetail = ({Articulo}) => {
             <h2>{Articulo.id}</h2>
             <h2>{Articulo.name}</h2>
             <h2>{Articulo.color}</h2>
+            <h2><img src={Articulo.img} alt="" /></h2> 
             <ItemCount stock={5} initial={1} onAdd={onAdd}/>
 
         </>    
