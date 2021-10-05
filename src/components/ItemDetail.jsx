@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Item from './Item'
 import ItemCount from './ItemCount'
 
@@ -10,6 +10,8 @@ const ItemDetail = ({Articulo}) => {
         console.log(cant)
         setCantArti(cant)
     }
+
+    const useContextApp = useContext()
     return(
         <>
             <h2>{Articulo.id}</h2>
