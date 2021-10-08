@@ -7,6 +7,7 @@ import NavBar from '../src/components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from "./components/Cart/Cart";
+import  CartContextProvider  from './Context/cartContext';
 
 const categorias = [
  
@@ -21,7 +22,7 @@ const categorias = [
 
 ]
 
-const ContextApp = createContext ('sasadis')
+export const ContextApp = createContext ('sasadis')
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
     setearEstado(item)
   }
   return ( 
+    <CartContextProvider>
     <ContextApp.Provider  value = {state}>
     <BrowserRouter>
         <NavBar /> 
@@ -47,6 +49,7 @@ function App() {
       
     </BrowserRouter>
     </ContextApp.Provider> 
+    </CartContextProvider>
   )
 
 

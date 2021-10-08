@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react'
-import Item from './Item'
+import { ContextApp } from '../App'
+import { useCartContext } from '../Context/cartContext'
+//import Item from './Item'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({Articulo}) => {
@@ -8,12 +10,19 @@ const ItemDetail = ({Articulo}) => {
 
     const onAdd = (cant)=>{
         console.log(cant)
+        addToCart({item: Articulo, cantidad: cant})
         setCantArti(cant)
     }
 
-    const useContextApp = useContext()
+
+    const {addToCart} = useCartContext
+    
+   const { state } = useContext(ContextApp)
+   
+
     return(
         <>
+           
             <h2>{Articulo.id}</h2>
             <h2>{Articulo.name}</h2>
             <h2>{Articulo.color}</h2>
